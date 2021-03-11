@@ -5,31 +5,18 @@ from setuptools import setup, find_packages
 install_requires = [
     'numpy>=1.10.0',
     'scipy>=0.18.0',
-    'scikit-learn>=0.22.0',
     'pandas>=0.25',
-    'imageio',
-    'pygsp',
     'scprep',
+    'tasklogger',
     'graphtools',
     'phate',
-    'umap-learn',
-    'networkx',
+    'matplotlib>=3.0',
     'ipywidgets',
     'plotly==3.10.0',
-    'numba',
-    'markdown',
-    'matplotlib>=3.0'
+    'graph_coarsening @ git+https://github.com/loukasa/graph-coarsening',
 ]
 
-extras_requires = [
-    'h5py',
-    'rpy2>=3.0',
-]
-
-package_name = "blog_tools"
-
-if sys.version_info[:2] < (3, 6):
-    raise RuntimeError("Python version >=3.6 required.")
+package_name = "h_phate"
 
 version_py = os.path.join(os.path.dirname(
     __file__), package_name, 'version.py')
@@ -41,14 +28,14 @@ readme = open('README.md').read()
 setup(name=package_name,
       version=version,
       description=package_name,
-      author='Scott Gigante and Daniel Burkhardt, Krishnaswamy Lab, Yale University',
+      author='Scott Gigante, Krishnaswamy Lab, Yale University',
       author_email='krishnaswamylab@gmail.com',
       packages=find_packages(),
       license='GNU General Public License Version 2',
       install_requires=install_requires,
       long_description=readme,
-      url='https://github.com/KrishnaswamyLab/visualization_selection',
-      download_url="https://github.com/KrishnaswamyLab/visualization_selection/archive/v{}.tar.gz".format(
+      url='https://github.com/KrishnaswamyLab/h_phate_demo',
+      download_url="https://github.com/KrishnaswamyLab/h_phate_demo/archive/v{}.tar.gz".format(
           version),
       keywords=['big-data',
                 'dimensionality-reduction',

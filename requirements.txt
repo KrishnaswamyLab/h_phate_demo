@@ -8,3 +8,4 @@ phate
 matplotlib>=3.0
 ipywidgets
 plotly==3.10.0
+git+https://github.com/loukasa/graph-coarsening
