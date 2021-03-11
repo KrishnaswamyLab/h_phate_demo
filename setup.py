@@ -13,7 +13,7 @@ install_requires = [
     'matplotlib>=3.0',
     'ipywidgets',
     'plotly==3.10.0',
-    'git+https://github.com/loukasa/graph-coarsening',
+    'graph_coarsening @ git+https://github.com/loukasa/graph-coarsening',
 ]
 
 package_name = "h_phate"
